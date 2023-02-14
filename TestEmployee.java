@@ -11,14 +11,14 @@ public class TestEmployee{
         Scanner scin = new Scanner(System.in);
         boolean invalidInput = false;
         while(choice == 1){
-            System.out.print("---- Menu ----\n1.Add employees\nAny other key to exit\nEnter choice: ");
             do{
                 invalidInput = false;
                 try{
+                    System.out.print("---- Menu ----\n1.Add employees\nAny other key to display and exit\nEnter choice: ");
                     choice = Integer.parseInt(scin.nextLine());
                 }
                 catch(NumberFormatException e){
-                    System.out.println("Enter valid menu option (only integers)");
+                    System.out.println("Enter valid menu option (only integers)\n");
                     invalidInput = true;
                 }
             }while(invalidInput);
