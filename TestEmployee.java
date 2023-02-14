@@ -18,7 +18,7 @@ public class TestEmployee{
                     choice = Integer.parseInt(scin.nextLine());
                 }
                 catch(NumberFormatException e){
-                    System.out.println("Enter valid menu option (1 or 2)");
+                    System.out.println("Enter valid menu option (only integers)");
                     invalidInput = true;
                 }
             }while(invalidInput);
@@ -28,11 +28,11 @@ public class TestEmployee{
                 while(true){
                     System.out.print("Enter name: ");
                     name = scin.nextLine();
-                    if(name.matches("^[a-zA-Z ]+") && name.length()>5){
+                    if(name.matches("^[A-Z][a-zA-Z ]+")){
                         break;
                     }
                     else{
-                        System.out.println("Enter valid name (only alphabets of size > 5)\n");
+                        System.out.println("Enter valid name (Start with caps)\n");
                     }
                 }
                 do{
@@ -59,7 +59,7 @@ public class TestEmployee{
                             desg_choice = Integer.parseInt(scin.nextLine());
                         }
                         catch(NumberFormatException e){
-                            System.out.println("Enter only one integer...\n");
+                            System.out.println("Enter only one integer option\n");
                             invalidInput = true;
                         }
                     }while(invalidInput);
