@@ -85,7 +85,7 @@ public class TestEmployee{
         if(employees.size() != 0){
             System.out.println("..... All Employees available .....");
             for (int i = 0; i < employees.size(); i++) {
-                employees.get(i).ToString();
+                System.out.println(employees.get(i).toString());
                 System.out.println();
             }
         }

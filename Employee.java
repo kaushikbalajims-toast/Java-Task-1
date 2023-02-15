@@ -46,23 +46,18 @@ class Employee{
         this.salary = sal;
     }
 
-    public void SetAllowance(){
-        double allowance;
+    public double SetAllowance(){
         if(this.designation.compareTo("Manager") == 0){
-            allowance = (20 * this.salary) / 100;
-            this.salary += allowance; 
+            return (20 * this.salary / 100);
         }
         else{
-            allowance = (10 * this.salary) / 100;
-            this.salary += allowance;
+            return (10 * this.salary / 100);
         }
-        System.out.println("Salary without allowance: " + (this.salary-allowance));
-        System.out.println("Allowance: "+allowance);
-        System.out.println("Salary with allowance: " + this.salary);
     }
-    public void ToString(){
-        System.out.println("ID:\t\t" + this.empID + "\nName:\t\t" + this.name + "\nDesignation:\t" + this.designation + "\nDepartment:\t" + this.department);
-        System.out.println();
+    @Override
+    public String toString(){
         SetAllowance();
+        System.out.println();
+        return ("ID:\t\t\t\t" + this.empID + "\nName:\t\t\t\t" + this.name + "\nDesignation:\t\t\t" + this.designation + "\nDepartment:\t\t\t" + this.department + "\n\nSalary Without allowance\t" + this.salary + "\nSalary with allowance:\t\t" + (this.SetAllowance() + this.salary) + "\nEmployee allowance:\t\t" + this.SetAllowance());
     }
 }
