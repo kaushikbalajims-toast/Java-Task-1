@@ -37,7 +37,7 @@ public class TestEmployee{
                         System.out.println("Enter valid salary");
                         invalidInput = true;
                     }
-                    if(salary < 10000){
+                    if(salary < 10000 && invalidInput!=true){
                         System.out.println("Enter 5 figure salary");
                         invalidInput = true;
                     }
